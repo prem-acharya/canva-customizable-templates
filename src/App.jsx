@@ -1,12 +1,16 @@
 import React from "react"
+import Toolbar from './components/Toolbar'
+import Canvas from "./components/Canvas"
 
 function App() {
 
   return (
-    <>
-      <div className="text-center text-3xl text-blue-600">canva customizable templates</div>
-    </>
+    <div className="flex">
+      <Toolbar />
+      <Canvas />
+    </div>
   )
 }
 
 export default App
+
