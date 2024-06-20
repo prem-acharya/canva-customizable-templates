@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Canvas() {
-  const [text, setText] = useState('Editable Text');
-  const [fontSize, setFontSize] = useState('16px');
-  const [fontColor, setFontColor] = useState('#000000');
-  const [fontFamily, setFontFamily] = useState('Arial');
-
+function Canvas({ background, text, fontSize, fontColor, fontFamily }) {
   return (
-    <div className="flex-1 p-4">
-      <div style={{ fontSize, color: fontColor, fontFamily }} contentEditable={true} suppressContentEditableWarning={true}>
-        {text}
+    <div className="flex justify-center items-center h-screen">
+      <div className="bg-no-repeat bg-center bg-cover transform scale-60 w-[210mm] h-[297mm] shadow-xl" style={{ backgroundImage: `url(${background})` }}>
+        <div style={{ fontSize, color: fontColor, fontFamily }} contentEditable={true} suppressContentEditableWarning={true}>
+          {/* Editing */}
+        </div>
       </div>
     </div>
   );
