@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import bg2 from '../assets/bg2.png'
 
 function Canvas({ background, text, fontSize, fontColor, fontFamily }) {
-  const [zoom, setZoom] = useState(50);
+  const [zoom, setZoom] = useState(55);
 
   return (
-    <div className="flex justify-center items-center h-screen relative">
-      <div className="bg-no-repeat bg-center bg-cover w-[210mm] h-[297mm] shadow-xl" style={{ backgroundImage: `url(${background})`, transform: `scale(${zoom / 100})` }}>
-        <div style={{ fontSize, color: fontColor, fontFamily }} contentEditable={true} suppressContentEditableWarning={true}>
-          {/* Editing */}
+    <div className="flex justify-center items-center h-screen">
+      <div className="bg-no-repeat bg-center bg-cover w-[210mm] h-[297mm] shadow-xl" style={{ backgroundImage: `url(${background || bg2})`, transform: `scale(${zoom / 100})` }}>
+        <div style={{ fontSize: `${fontSize}px`, color: fontColor, fontFamily }} contentEditable={true} suppressContentEditableWarning={true}>
+          Editing
         </div>
       </div>
       <div className="absolute bottom-0 right-0 p-4">

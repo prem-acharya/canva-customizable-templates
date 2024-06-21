@@ -4,16 +4,18 @@ import Canvas from "./components/Canvas";
 import BackgroundSelector from "./components/BackgroundSelector";
 
 function App() {
-  const [background, setBackground] = useState(""); // State to hold background image URL
+  const [background, setBackground] = useState("");
+  const [fontSize, setFontSize] = useState(50);
+  const [fontColor, setFontColor] = useState("#000000");
 
   return (
-    <div className="flex bg-gray-100">
+    <div className="flex">
       <div>
-        <Toolbar />
+        <Toolbar setFontSize={setFontSize} setFontColor={setFontColor} />
         <hr />
         <BackgroundSelector setBackground={setBackground} />
       </div>
-      <Canvas background={background} />
+      <Canvas background={background} fontSize={fontSize} fontColor={fontColor} />
     </div>
   );
 }
