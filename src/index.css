@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Monoton';
+    src: url('./fonts/Monoton/Monoton-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
